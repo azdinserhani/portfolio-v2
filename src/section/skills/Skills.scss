@@ -1,0 +1,23 @@
+.skills {
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+  h2 {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .skillsItems {
+   display: grid;
+   grid-template-columns: repeat(6,100px);
+   row-gap: 30px;
+   column-gap: 30px;
+   align-items: center;
+   justify-content: center;
+    .skItem {
+   
+      height: 100px;
+    }
+  }
+}

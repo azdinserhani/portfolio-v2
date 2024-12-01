@@ -1,0 +1,47 @@
+.navbar {
+  display: flex;
+  padding: 30px 0px;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  .left {
+    p {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+  .centre {
+    display: flex;
+    gap: 20px;
+
+    li {
+      list-style: none;
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+  .right {
+    a {
+      text-decoration: none;
+    }
+    button {
+      padding: 10px;
+      border: none;
+      outline: none;
+      background-color: black;
+      color: white;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      gap: 5px;
+      transition: 0.5s ease-in all;
+
+      &:hover {
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+      }
+    }
+  }
+}
