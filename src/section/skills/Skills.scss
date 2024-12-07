@@ -1,13 +1,10 @@
 .skills {
-  height: 80vh;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  h2 {
-    font-size: 40px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 50px;
-  }
+  
   .skillsItems {
    display: grid;
    grid-template-columns: repeat(6,100px);
@@ -16,8 +13,22 @@
    align-items: center;
    justify-content: center;
     .skItem {
-   
-      height: 100px;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        gap: 20px;
+        border-radius: 5px;
+        transition: all 0.3s ease-in;
+        cursor: pointer;
+
+          &:hover {
+            scale: 1.1;
+            color: white;
+            background-color: black;
+          }
     }
   }
 }

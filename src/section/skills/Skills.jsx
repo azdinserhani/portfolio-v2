@@ -1,14 +1,17 @@
 import "./Skills.scss";
-import { skills } from "../../mockData";
+import {  skillsNew } from "../../mockData";
 const Skills = () => {
   return (
     <div className="skills">
-      <h2>My Skills</h2>
+      <h2 className="sectionTittle">My Skills</h2>
       <div className="skillsItems">
-        {skills.map((item, index) => {
+        {skillsNew.map((item, index) => {
           return (
-            <div className="skItem" key={index}>
+            <div className="skItem" key={ index }>
+            
+
               {item.img}
+              
               <span>{item.name}</span>
             </div>
           );

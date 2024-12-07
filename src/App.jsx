@@ -1,4 +1,5 @@
 import "./App.scss";
+import About from "./section/about/About";
 import Hero from "./section/hero/Hero";
 import Skills from "./section/skills/Skills";
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <div className="app">
       <Hero />
       <Skills />
+      <About/>
     </div>
   );
 }
