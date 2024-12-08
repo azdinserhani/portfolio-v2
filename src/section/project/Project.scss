@@ -1,0 +1,18 @@
+.project{
+    color: white;
+    background-color: black;
+    width: 100%;
+  padding: 50px;
+    h2{
+        text-align: center;
+      span{
+   font-weight: bolder;
+   }  
+    }
+   .projectContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 99px;
+   }
+
+}
