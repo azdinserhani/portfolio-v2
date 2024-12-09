@@ -31,5 +31,41 @@
           font-size: 20px;
         color: #919191;
      }
+     .btn{
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      button{
+      padding: 20px;
+      border: none;
+      outline: none;
+      background-color: white;
+      font-size: 20px;
+      width: 50%;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.5s all ease-in-out;
+      a{
+         text-decoration: none;
+         color: black;
+      }
+      &:hover{
+         border-radius: 0px;
+      }
+     }
+     .link{
+      a{
+         text-decoration: none;
+         color: white;
+         cursor: pointer;
+      &:hover{
+         color: #919191 !important;
+      }
+      }
+      
+     }
+     }
+     
     }
 }

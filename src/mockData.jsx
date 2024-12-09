@@ -69,6 +69,7 @@ export const projectData = [
     desc: "YumYard is a dynamic web application designed to help users discover, manage, and share recipes.",
     img: "../YumYard.png",
     isReverced: false,
+    gitUrl: "https://github.com/azdinserhani/YumYard-Client-Side.git",
   },
   {
     num: "02",
@@ -76,6 +77,7 @@ export const projectData = [
     desc: "A full-stack e-commerce platform with a React client and an admin panel for managing products, orders, and users. The API supports smooth data handling for a seamless shopping experience.",
     img: "../ecommerce.png",
     isReverced: true,
+    gitUrl: "https://github.com/azdinserhani/e-commerce-client-side.git",
   },
   {
     num: "03",
@@ -83,6 +85,8 @@ export const projectData = [
     desc: "A modern marketplace connecting buyers and sellers with seamless listing, browsing, and purchasing features, showcasing scalable web development expertise.",
     img: "../clicon.png",
     isReverced: false,
+    link: "https://marketplace-project-client.onrender.com/",
+    gitUrl: false,
   },
   {
     num: "04",
@@ -90,5 +94,6 @@ export const projectData = [
     desc: "Glyco Vision is a comprehensive web application designed to help users track and manage their blood sugar levels. It provides insightful charts and offers personalized advice based on symptoms. Additionally, it includes features for finding pharmacies on duty and giving patient advice.",
     img: "../pharmacy.png",
     isReverced: true,
+    gitUrl: "https://github.com/azdinserhani/Glyco-Vision_clients-site.git",
   },
 ];
