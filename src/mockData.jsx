@@ -10,7 +10,6 @@ import { SiPostgresql } from "react-icons/si";
 import { FaBootstrap } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { SiSocketdotio } from "react-icons/si";
-import yumYard from "../public/YumYard.PNG";
 export const skillsNew = [
   {
     name: "ReactJs",

@@ -12,7 +12,8 @@ const ProjectCard = ({ item }) => {
         <h3>{item.title}</h3>
         <p>{item.desc}</p>
         <div className="btn">
-          { item.gitUrl && <button> <a href={item.gitUrl}>Git Repo</a></button>}{ " " }
+          { item.gitUrl && <button> <a href={ item.gitUrl }>Git Repo</a></button> }{ " " }
+          {item.gitUrl === false && <p>Client Project</p>}
           { item.link && <div className="link">
             <a href={ item.link }>
               
