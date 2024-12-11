@@ -15,9 +15,19 @@
     gap: 20px;
 
     li {
+      
+      padding: 5px;
+      cursor: pointer;
       list-style: none;
       font-size: 18px;
       font-weight: 500;
+      transition: all 0.5s ease-in-out;
+      &:hover{
+// border: 1px solid black;
+      border-radius: 5px;
+      background-color: black;
+      color: white;
+      }
     }
   }
   .right {

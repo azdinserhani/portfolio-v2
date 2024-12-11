@@ -4,14 +4,57 @@ import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { delay, motion } from "framer-motion";
+import { social } from "../../mockData";
 const Hero = () => {
+  const socialVariant = {
+    initial: {
+      y: 100,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        ease: "easeInOut",
+      },
+    },
+  };
+  const name = "Az-eddine serhani.".split("");
+
   return (
     <div className="hero">
       <Navbar />
       <div className="info">
-        <div className="left">
+        <motion.div
+          className="left"
+          initial={{ opacity: 0, y: 200 }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 1,
+              ease: "easeInOut",
+              delay: 0.3,
+            },
+          }}
+        >
           <h1>
-            Hello I'am <br /><span>Az-eddine serhani.</span>
+            Hello I'am <br />
+            {name.map((char, index) => {
+              return (
+                <motion.span
+                  key={index}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 2, delay: 0.15 * index }}
+                >
+                  {char}
+                </motion.span>
+              );
+            })}
+            {/* <span>Az-eddine serhani.</span> */}
           </h1>
           <h2>
             Full Stack <span>Developer</span>{" "}
@@ -23,23 +66,36 @@ const Hero = () => {
             problems and drive innovation.
           </p>
           <div className="social">
-            <a href="https://github.com/azdinserhani">
-              <GitHubIcon fontSize="inherit" />
-            </a>{" "}
-            <a href="https://www.facebook.com/azdine.azdine.52438174">
-              <FacebookOutlinedIcon fontSize="inherit" />
-            </a>{" "}
-            <a href="https://www.instagram.com/azedine.dev/">
-              <InstagramIcon fontSize="inherit" />
-            </a>{" "}
-            <a href="https://www.linkedin.com/in/az-eddine-serhani-32033a288/">
-              <LinkedInIcon fontSize="inherit" />
-            </a>
+            {social.map((item, index) => {
+              return (
+                <motion.a
+                  key={index}
+                  href={item.link}
+                  initial={{ opacity: 0, y: 200 }}
+                  whileHover={{ scale: 1.1 }}
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      duration: 0.5,
+                      ease: "easeInOut",
+                      delay: 0.1 * index,
+                    },
+                  }}
+                >
+                  {item.icon}
+                </motion.a>
+              );
+            })}
           </div>
-        </div>
-        <div className="right">
+        </motion.div>
+        <motion.div
+          className="right"
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1, transition: { duration: 1 } }}
+        >
           <img src="../profile.jpg" alt="" />
-        </div>
+        </motion.div>
       </div>
     </div>
   );

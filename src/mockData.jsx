@@ -10,6 +10,10 @@ import { SiPostgresql } from "react-icons/si";
 import { FaBootstrap } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { SiSocketdotio } from "react-icons/si";
+import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 export const skillsNew = [
   {
     name: "ReactJs",
@@ -96,3 +100,23 @@ export const projectData = [
     gitUrl: "https://github.com/azdinserhani/Glyco-Vision_clients-site.git",
   },
 ];
+
+export const social = [
+  {
+    icon: <GitHubIcon fontSize="inherit" />,
+    link: "https://github.com/azdinserhani"
+  },
+  {
+   
+    icon: <FacebookOutlinedIcon fontSize="inherit" />,
+    link: "https://www.facebook.com/azdine.azdine.52438174"
+  },
+  {
+    icon:<InstagramIcon fontSize="inherit" />,
+ link: "https://www.instagram.com/azedine.dev/" 
+  }, {
+    icon: <LinkedInIcon fontSize="inherit" />,
+  link: "https://www.linkedin.com/in/az-eddine-serhani-32033a288/"
+}
+
+]
