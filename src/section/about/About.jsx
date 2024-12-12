@@ -14,7 +14,7 @@ const About = () => {
           },
         }}
       >
-        <img src="../about.jpg" alt="" />
+        <img src="../about.jpg" alt="about" />
       </motion.div>
       <div className="info">
         <motion.h2
