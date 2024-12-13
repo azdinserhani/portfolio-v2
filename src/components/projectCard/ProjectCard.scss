@@ -12,10 +12,13 @@
    }
     .projectImg{
         flex: 1;
+        @include mobile(){
+      flex: 0;
+   }
         img{
             border-radius: 15px;
             width: 100%;
-            height: 400px;
+            height: auto;
             object-fit: contain;
         }
     }
