@@ -1,10 +1,16 @@
+@import "../../App.scss";
 .skills {
   height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+
   justify-content: center;
-  
+  @include mobile(){
+    height: 100vh;
+  justify-content: start;
+
+  }
   .skillsItems {
    display: grid;
    grid-template-columns: repeat(6,100px);
@@ -12,6 +18,10 @@
    column-gap: 30px;
    align-items: center;
    justify-content: center;
+   @include mobile(){
+     grid-template-columns: repeat(3,100px);
+     transform-origin: bottom;
+   }
     .skItem {
         border: 1px solid black;
         display: flex;

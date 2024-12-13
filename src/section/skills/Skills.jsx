@@ -3,7 +3,7 @@ import { skillsNew } from "../../mockData";
 import { motion } from "framer-motion";
 const Skills = () => {
   return (
-    <div className="skills" id="skills">
+    <div className="skills" id="Skills">
       <motion.h2
         className="sectionTittle"
         initial={{ opacity: 0, y: -100 }}
@@ -17,10 +17,10 @@ const Skills = () => {
             <motion.div
               className="skItem"
               key={index}
-              initial={{ opacity: 0, x: 200 }}
+              initial={{ opacity: 0, y: 200 }}
               whileInView={{
                 opacity: 1,
-                x: 0,
+                y: 0,
                 transition: {
                   duration: 1,
                   ease: "linear",

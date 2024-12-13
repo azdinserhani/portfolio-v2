@@ -45,7 +45,7 @@ const Contact = () => {
       );
   };
   return (
-    <div className="contact" ref={ref} id="contact">
+    <div className="contact" ref={ref} id="Contact">
       <motion.div
         className="wrapper"
         variants={variants}

@@ -2,7 +2,7 @@ import "./About.scss";
 import { motion } from "framer-motion";
 const About = () => {
   return (
-    <div className="about" id="about">
+    <div className="about" id="About">
       <motion.div
         className="imgContainer"
         initial={{ scale: 0, opacity: 0 }}

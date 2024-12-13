@@ -1,8 +1,21 @@
+@import "../../App.scss";
 .hero {
+
+  @include mobile {
+        width: 100vw;
+  overflow-x: hidden;
+      }
+  
+
   .info {
     height: calc(100vh - 100px);
     display: flex;
     width: 100%;
+    @include mobile {
+        height: 100vh;
+        flex-direction: column;
+        width: 100vw;
+      }
     .left {
       height: 100%;
       padding: 100px;
@@ -10,6 +23,11 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
+      @include mobile {
+       height: 100vh;
+       padding: 30px;
+       justify-content: center;
+      }
       h1 {
         font-size: 40px;
         span {
@@ -29,11 +47,39 @@
       p{
         font-size: 20px;
         color: #919191;
+        @include mobile {
+        width: 70%;
       }
+      }
+      a {
+      text-decoration: none;
+    }
+    button {
+      padding: 10px;
+      border: none;
+      outline: none;
+      background-color: black;
+      color: white;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      gap: 5px;
+      transition: 0.5s ease-in all;
+
+      &:hover {
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+      }
+    }
       .social {
         margin-top: auto;
         display: flex;
         gap: 40px;
+        @include mobile {
+       margin-top: 100px;
+      }
         a {
           border: 1px solid black;
           display: flex;
@@ -52,6 +98,9 @@
       }
     }
     .right {
+      @include mobile {
+        display: none;
+      }
       flex: 1;
       padding: 100px;
       img {

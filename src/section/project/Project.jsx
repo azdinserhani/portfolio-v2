@@ -4,7 +4,7 @@ import "./Project.scss";
 import {motion} from "framer-motion"
 const Project = () => {
   return (
-    <div className="project" id="project">
+    <div className="project" id="Projects">
       <motion.h2
         initial={{ opacity: 0, y: -100 }}
         whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}

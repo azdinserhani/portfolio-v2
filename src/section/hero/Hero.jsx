@@ -1,31 +1,15 @@
 import "./Hero.scss";
-import Navbar from "../../components/navbar/Navbar";
-import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { delay, motion } from "framer-motion";
+
+import {  motion } from "framer-motion";
+import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
+
 import { social } from "../../mockData";
 const Hero = () => {
-  const socialVariant = {
-    initial: {
-      y: 100,
-      opacity: 0,
-    },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 1,
-        ease: "easeInOut",
-      },
-    },
-  };
+ 
   const name = "Az-eddine serhani.".split("");
 
   return (
-    <div className="hero">
-      <Navbar />
+    <div className="hero" id="Home">
       <div className="info">
         <motion.div
           className="left"
@@ -54,7 +38,7 @@ const Hero = () => {
                 </motion.span>
               );
             })}
-            {/* <span>Az-eddine serhani.</span> */}
+           
           </h1>
           <h2>
             Full Stack <span>Developer</span>{" "}
@@ -65,6 +49,17 @@ const Hero = () => {
             Morocco, passionate about leveraging technology to solve complex
             problems and drive innovation.
           </p>
+          <a
+            href="../../public/myCv.pdf"
+            download="Az-eddine_Serhani_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button>
+              Resume
+              <FileDownloadOutlinedIcon />
+            </button>
+          </a>
           <div className="social">
             {social.map((item, index) => {
               return (
