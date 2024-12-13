@@ -1,4 +1,8 @@
+@import "../../App.scss";
 .cursor {
+    @include mobile(){
+        display: none;
+    }
   position: fixed;
   top: 0;
   left: 0;
