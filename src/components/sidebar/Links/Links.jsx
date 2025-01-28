@@ -26,14 +26,14 @@ const itemVariants = {
   },
 };
 
-const Links = () => {
+const Links = ({setOpen}) => {
   const items = ["Home", "Skills", "About", "Projects", "Contact"];
 
   return (
     <motion.div className="links" variants={variants}>
       {items.map((item, i) => {
         return (
-          <motion.a variants={itemVariants} key={i} href={`#${item}`} whileHover={{scale:1.1}} whileTap={{scale:0.9}}>
+          <motion.a variants={itemVariants} key={i} href={`#${item}`} whileHover={{scale:1.1}} whileTap={{scale:0.9}} onClick={()=>setOpen(false)}>
             {item}
           </motion.a>
         );
