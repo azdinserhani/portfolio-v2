@@ -38,17 +38,12 @@ const Hero = () => {
                 </motion.span>
               );
             })}
-           
           </h1>
           <h2>
             Full Stack <span>Developer</span>{" "}
           </h2>
           <h2>Based In Morocco</h2>
-          <p>
-            Az-eddine Serhani, a dedicated 20-year-old web developer from
-            Morocco, passionate about leveraging technology to solve complex
-            problems and drive innovation.
-          </p>
+          <p>Passionate about clean code and user-centric design.</p>
           <a
             href="../../public/myCv.pdf"
             download="Az-eddine_Serhani_CV.pdf"
