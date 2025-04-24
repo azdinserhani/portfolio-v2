@@ -11,8 +11,13 @@
   padding: 80px 20px;
   overflow: hidden;
   
+  @include tablet() {
+    padding: 70px 20px;
+  }
+  
   @include mobile() {
     padding: 60px 15px;
+    min-height: auto;
   }
   
   .project-background {
@@ -35,6 +40,12 @@
       background-color: $accent-color;
       top: 20%;
       right: -150px;
+      
+      @include mobile() {
+        width: 300px;
+        height: 300px;
+        right: -180px;
+      }
     }
     
     .circle2 {
@@ -43,6 +54,12 @@
       background-color: #3f51b5;
       bottom: 10%;
       left: -100px;
+      
+      @include mobile() {
+        width: 250px;
+        height: 250px;
+        left: -120px;
+      }
     }
   }
   
@@ -52,11 +69,27 @@
     width: 100%;
     max-width: 1200px;
     
+    @include tablet() {
+      max-width: 90%;
+    }
+    
+    @include mobile() {
+      max-width: 100%;
+    }
+    
     .sectionTittle {
       font-size: 48px;
       font-weight: 700;
       text-align: center;
       margin-bottom: 10px;
+      
+      @include tablet() {
+        font-size: 42px;
+      }
+      
+      @include mobile() {
+        font-size: 36px;
+      }
       
       span {
         color: $accent-color;
@@ -68,6 +101,16 @@
       font-size: 18px;
       color: $text-secondary;
       margin-bottom: 60px;
+      
+      @include tablet() {
+        font-size: 17px;
+        margin-bottom: 50px;
+      }
+      
+      @include mobile() {
+        font-size: 16px;
+        margin-bottom: 40px;
+      }
     }
     
     .projectContainer {
@@ -75,8 +118,12 @@
       flex-direction: column;
       gap: 100px;
       
+      @include tablet() {
+        gap: 80px;
+      }
+      
       @include mobile() {
-        gap: 70px;
+        gap: 50px;
       }
     }
   }

@@ -1,4 +1,5 @@
 @import "../../App.scss";
+
 .sideBar {
   display: flex;
   flex-direction: column;
@@ -6,6 +7,7 @@
   justify-content: center;
   background-color: $dark-background;
   color: $text-primary;
+  z-index: 1000;
  
   .bg {
     z-index: 999;
@@ -16,31 +18,70 @@
     width: 400px;
     background: $dark-surface;
     border-right: 1px solid rgba(255, 255, 255, 0.05);
-   @include mobile(){
-    width: 200px;
-   }
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+    
+    @include tablet() {
+      width: 300px;
+    }
+    
+    @include mobile() {
+      width: 100%;
+      border-right: none;
+    }
+    
     .links {
-       
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap: 20px;
-        a{
-          text-decoration: none;
-          color: $text-primary;
-          font-size: 30px;
-          transition: color 0.3s ease;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 30px;
+      padding: 0 20px;
+      
+      @include mobile() {
+        gap: 25px;
+        padding-top: 100px;
+      }
+      
+      a {
+        text-decoration: none;
+        color: $text-primary;
+        font-size: 30px;
+        transition: all 0.3s ease;
+        position: relative;
+        
+        @include tablet() {
+          font-size: 26px;
+        }
+        
+        @include mobile() {
+          font-size: 24px;
+        }
+        
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background-color: $accent-color;
+          transition: width 0.3s ease;
+        }
+        
+        &:hover {
+          color: $accent-color;
           
-          &:hover {
-            color: $accent-color;
+          &:after {
+            width: 100%;
           }
         }
+      }
     }
   }
+  
   button {
     z-index: 1000;
     width: 50px;
@@ -52,5 +93,10 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    
+    @include mobile() {
+      top: 20px;
+      left: 20px;
+    }
   }
 }

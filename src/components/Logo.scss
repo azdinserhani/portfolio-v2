@@ -18,9 +18,19 @@
     }
   }
   
+  @include tablet {
+    left: auto;
+    right: 30px;
+    
+    h1 {
+      font-size: 28px;
+    }
+  }
+  
   @include mobile {
     left: auto;
     right: 20px;
+    top: 25px;
     
     h1 {
       font-size: 24px;

@@ -10,9 +10,14 @@
   justify-content: center;
   padding: 0 20px;
 
+  @include tablet {
+    padding: 0 15px;
+  }
+
   @include mobile {
-    width: 100vw;
+    width: 100%;
     overflow-x: hidden;
+    padding: 0 15px;
   }
 
   .hero-background {
@@ -35,6 +40,12 @@
       width: 450px;
       height: 450px;
       background: $accent-color;
+      
+      @include mobile {
+        width: 300px;
+        height: 300px;
+        right: -150px;
+      }
     }
     
     .circle2 {
@@ -43,6 +54,12 @@
       width: 550px;
       height: 550px;
       background: #3f51b5;
+      
+      @include mobile {
+        width: 350px;
+        height: 350px;
+        left: -200px;
+      }
     }
     
     .circle3 {
@@ -52,6 +69,11 @@
       height: 300px;
       background: #f44336;
       opacity: 0.1;
+      
+      @include mobile {
+        width: 200px;
+        height: 200px;
+      }
     }
   }
 
@@ -60,6 +82,14 @@
     z-index: 1;
     width: 100%;
     max-width: 1200px;
+    
+    @include tablet {
+      max-width: 100%;
+    }
+    
+    @include mobile {
+      max-width: 100%;
+    }
   }
 
   .info {
@@ -68,9 +98,13 @@
     width: 100%;
     gap: 40px;
     
+    @include tablet {
+      gap: 30px;
+    }
+    
     @include mobile {
-      min-height: 100vh;
-      flex-direction: column;
+      min-height: auto;
+      flex-direction: column-reverse;
       width: 100%;
       gap: 30px;
     }
@@ -83,9 +117,16 @@
       flex-direction: column;
       gap: 24px;
       
+      @include tablet {
+        padding: 60px 15px;
+        gap: 20px;
+      }
+      
       @include mobile {
-        padding: 40px 20px;
-        justify-content: center;
+        padding: 30px 10px;
+        gap: 16px;
+        text-align: center;
+        align-items: center;
       }
       
       .intro-tag {
@@ -107,8 +148,13 @@
         margin-bottom: 5px;
         color: $text-primary;
         
+        @include tablet {
+          font-size: 44px;
+        }
+        
         @include mobile {
           font-size: 36px;
+          text-align: center;
         }
         
         .name-animation {
@@ -127,16 +173,29 @@
         gap: 30px;
         margin-top: 5px;
         
+        @include mobile {
+          justify-content: center;
+          gap: 15px;
+        }
+        
         h2 {
           font-size: 22px;
           font-weight: 500;
           color: $text-secondary;
+          
+          @include mobile {
+            font-size: 20px;
+          }
           
           span {
             font-size: 26px;
             position: relative;
             font-weight: bold;
             color: $accent-color;
+            
+            @include mobile {
+              font-size: 24px;
+            }
             
             &:after {
               content: '';
@@ -167,6 +226,10 @@
             font-size: 18px;
             font-weight: 400;
             color: $text-secondary;
+            
+            @include mobile {
+              font-size: 16px;
+            }
           }
         }
       }
@@ -177,8 +240,15 @@
         color: $text-secondary;
         max-width: 500px;
         
+        @include tablet {
+          max-width: 100%;
+          font-size: 17px;
+        }
+        
         @include mobile {
           width: 100%;
+          font-size: 16px;
+          text-align: center;
         }
       }
       
@@ -187,13 +257,23 @@
         gap: 20px;
         margin-top: 10px;
         
+        @include tablet {
+          gap: 15px;
+        }
+        
         @include mobile {
           flex-direction: column;
           gap: 15px;
+          width: 100%;
+          max-width: 300px;
         }
         
         a {
           text-decoration: none;
+          
+          @include mobile {
+            width: 100%;
+          }
           
           &.primary-btn button {
             background-color: $accent-color;
@@ -204,6 +284,10 @@
             &:hover {
               background-color: transparent;
               color: $accent-color;
+            }
+            
+            @include mobile {
+              width: 100%;
             }
           }
           
@@ -216,6 +300,10 @@
             &:hover {
               background-color: rgba(255, 255, 255, 0.1);
               border-color: rgba(255, 255, 255, 0.2);
+            }
+            
+            @include mobile {
+              width: 100%;
             }
           }
         }
@@ -231,6 +319,11 @@
           cursor: pointer;
           transition: all 0.3s ease;
           
+          @include mobile {
+            justify-content: center;
+            width: 100%;
+          }
+          
           svg {
             font-size: 20px;
           }
@@ -242,30 +335,14 @@
         display: flex;
         gap: 20px;
         
-        @include mobile {
-          margin-top: 40px;
+        @include tablet {
+          margin-top: 30px;
         }
         
-        a {
-          width: 55px;
-          height: 55px;
-          border: 1px solid rgba(255, 255, 255, 0.1);
-          display: flex;
-          align-items: center;
+        @include mobile {
+          margin-top: 30px;
           justify-content: center;
-          border-radius: 50%;
-          color: $text-secondary;
-          font-size: 26px;
-          transition: all 0.3s ease;
-          background-color: rgba(30, 30, 30, 0.7);
-          backdrop-filter: blur(5px);
-          
-          &:hover {
-            color: $text-primary;
-            background-color: rgba($accent-color, 0.15);
-            border-color: $accent-color;
-            transform: translateY(-5px);
-          }
+          gap: 15px;
         }
       }
     }
@@ -277,42 +354,63 @@
       justify-content: center;
       
       @include mobile {
-        display: none;
+        width: 100%;
       }
       
       .image-container {
+        width: 400px;
+        height: 400px;
         position: relative;
-        width: 350px;
-        height: 350px;
-        margin-right: 50px;
         
         @include tablet {
-          width: 280px;
-          height: 280px;
-          margin-right: 0;
+          width: 350px;
+          height: 350px;
+        }
+        
+        @include mobile {
+          width: 250px;
+          height: 250px;
         }
         
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          border-radius: 20px;
-          position: relative;
-          z-index: 2;
-          border: 4px solid rgba(255, 255, 255, 0.1);
+          border-radius: 50%;
+          border: 5px solid rgba(255, 255, 255, 0.1);
+          
+          @include mobile {
+            border-width: 3px;
+          }
         }
         
         .image-border {
           position: absolute;
-          width: 100%;
-          height: 100%;
-          border: 2px solid $accent-color;
-          top: 20px;
-          left: 20px;
-          border-radius: 20px;
-          z-index: 1;
+          top: -15px;
+          left: -15px;
+          right: -15px;
+          bottom: -15px;
+          border: 2px dashed rgba($accent-color, 0.7);
+          border-radius: 50%;
+          animation: rotate 20s linear infinite;
+          
+          @include mobile {
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+          }
         }
       }
     }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
