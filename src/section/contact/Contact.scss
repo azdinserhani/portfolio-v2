@@ -1,104 +1,211 @@
 @import "../../App.scss";
+
 .contact {
-  height: 80vh;
-  overflow: hidden;
-   @include mobile(){
-    height: auto;
-   }
-  .wrapper{
-   
-    width: 100%;
-    height: 100%;
- display: flex;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: row-reverse;
-  @include mobile(){
-    flex-direction: column-reverse;
-    height: auto;
-    padding: 100px;
-    gap: 20px;
+  background-color: $dark-background;
+  padding: 80px 20px;
+  overflow: hidden;
+  
+  @include mobile() {
+    padding: 60px 15px;
+    min-height: auto;
   }
-  .form {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+  
+  .contact-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
     
-   .formsvg {
-      stroke: black;
+    .bg-circle {
       position: absolute;
-      margin: auto;
-      z-index: -1;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.15;
     }
-    form {
-      gap: 20px;
-
-      width: 50%;
-      @include mobile(){
-        width: 100%;
-      }
-      display: flex;
-      flex-direction: column;
-     
-      justify-content: center;
-      input,
-      textarea {
-        padding: 20px;
-        background-color: transparent;
-        border: none;
-        outline: none;
-        border: 1px solid black;
-        border-radius: 5px;
-        color: black;
-        font-size: 18px;
-      }
-      .btnSend {
-        padding: 20px;
-        border: none;
-        outline: none;
-        background-color: white;
-        color: black;
-        font-size: 20px;
-        border: 1px solid black;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: 0.5s all ease-in-out;
-
-       &:hover {
-         background: linear-gradient(to right, white 50%, black 50%);
-         background-size: 200% 100%;
-         background-position: right bottom;
-         transition: background-position 0.5s ease-in-out;
-         // border-radius: 0px;
-         border: 1px solid white;
-
-         color: white;
-      }
-      }
+    
+    .circle1 {
+      width: 400px;
+      height: 400px;
+      background-color: $accent-color;
+      top: -50px;
+      right: -50px;
+    }
+    
+    .circle2 {
+      width: 350px;
+      height: 350px;
+      background-color: #3f51b5;
+      bottom: -50px;
+      left: -50px;
     }
   }
-  .info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    height: 50%;
-    .item {
-      padding-left: 50px;
-      h4 {
-        color: black;
-        font-size: 20px;
-      }
+  
+  .contact-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    
+    .sectionTittle {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 60px;
+      text-align: center;
+      
       span {
-        color: gray;
+        color: $accent-color;
       }
     }
-    h3 {
-      font-size: 90px;
-      padding-left: 50px;
+    
+    .wrapper {
+      width: 100%;
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 50px;
+      
+      @include mobile() {
+        flex-direction: column-reverse;
+        gap: 40px;
+      }
+      
+      .form-container {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        
+        .formsvg {
+          stroke: $accent-color;
+          position: absolute;
+          margin: auto;
+          z-index: -1;
+        }
+        
+        .contact-form {
+          gap: 20px;
+          width: 90%;
+          max-width: 500px;
+          display: flex;
+          flex-direction: column;
+          background-color: rgba(30, 30, 30, 0.7);
+          backdrop-filter: blur(5px);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 20px;
+          padding: 40px;
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+          
+          @include mobile() {
+            width: 100%;
+            padding: 30px 20px;
+          }
+          
+          input,
+          textarea {
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: $text-primary;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            
+            &:focus {
+              border-color: $accent-color;
+              box-shadow: 0 0 0 2px rgba($accent-color, 0.2);
+              outline: none;
+            }
+            
+            &::placeholder {
+              color: rgba($text-secondary, 0.7);
+            }
+          }
+          
+          .submit-btn {
+            padding: 15px 25px;
+            background-color: $accent-color;
+            color: $text-primary;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            box-shadow: 0 4px 15px rgba($accent-color, 0.3);
+            
+            &:hover {
+              background-color: darken($accent-color, 5%);
+              transform: translateY(-3px);
+            }
+          }
+        }
+      }
+      
+      .contact-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        background-color: rgba(30, 30, 30, 0.7);
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
+        padding: 50px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        
+        @include mobile() {
+          padding: 40px 25px;
+        }
+        
+        h3 {
+          font-size: 48px;
+          font-weight: 700;
+          color: $text-primary;
+          margin-bottom: 20px;
+          position: relative;
+          display: inline-block;
+          
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background-color: $accent-color;
+          }
+          
+          @include mobile() {
+            font-size: 36px;
+          }
+        }
+        
+        .info-item {
+          margin-bottom: 10px;
+          
+          h4 {
+            color: $accent-color;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 5px;
+          }
+          
+          span {
+            color: $text-secondary;
+            font-size: 18px;
+          }
+        }
+      }
     }
   }
-  }
-    }
+}
+

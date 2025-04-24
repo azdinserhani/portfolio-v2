@@ -1,0 +1,29 @@
+@import "../App.scss";
+
+.logo {
+  position: fixed;
+  top: 20px;
+  left: 100px;
+  z-index: 999;
+  
+  h1 {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: $text-primary;
+    
+    span {
+      color: $accent-color;
+      font-weight: 800;
+    }
+  }
+  
+  @include mobile {
+    left: auto;
+    right: 20px;
+    
+    h1 {
+      font-size: 24px;
+    }
+  }
+} 

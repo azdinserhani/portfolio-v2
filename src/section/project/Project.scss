@@ -1,20 +1,83 @@
-.project{
-    color: white;
-    background-color: black;
-    width: 100%;
-  padding: 50px;
-    h2{
-      font-size: 40px;
-        text-align: center;
-        margin-bottom: 50px;
-      span{
-   font-weight: bolder;
-   }  
-    }
-   .projectContainer{
-    display: flex;
-    flex-direction: column;
-    gap: 99px;
-   }
+@import "../../App.scss";
 
+.project {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $dark-background;
+  padding: 80px 20px;
+  overflow: hidden;
+  
+  @include mobile() {
+    padding: 60px 15px;
+  }
+  
+  .project-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    
+    .bg-circle {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.15;
+    }
+    
+    .circle1 {
+      width: 450px;
+      height: 450px;
+      background-color: $accent-color;
+      top: 20%;
+      right: -150px;
+    }
+    
+    .circle2 {
+      width: 350px;
+      height: 350px;
+      background-color: #3f51b5;
+      bottom: 10%;
+      left: -100px;
+    }
+  }
+  
+  .project-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    
+    .sectionTittle {
+      font-size: 48px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 10px;
+      
+      span {
+        color: $accent-color;
+      }
+    }
+    
+    .project-subtitle {
+      text-align: center;
+      font-size: 18px;
+      color: $text-secondary;
+      margin-bottom: 60px;
+    }
+    
+    .projectContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+      
+      @include mobile() {
+        gap: 70px;
+      }
+    }
+  }
 }

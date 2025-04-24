@@ -17,51 +17,51 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 export const skillsNew = [
   {
     name: "ReactJs",
-    img: <FaReact size={"50%"} />,
+    img: <FaReact size={"70%"} />,
   },
   {
     name: "Sass",
-    img: <FaSass size={"50%"} />,
+    img: <FaSass size={"70%"} />,
   },
   {
     name: "Javascript",
-    img: <IoLogoJavascript size={"50%"} />,
+    img: <IoLogoJavascript size={"70%"} />,
   },
   {
     name: "Html",
-    img: <FaHtml5 size={"50%"} />,
+    img: <FaHtml5 size={"70%"} />,
   },
   {
     name: "Css",
-    img: <FaCss3Alt size={"50%"} />,
+    img: <FaCss3Alt size={"70%"} />,
   },
   {
     name: "Nodejs",
-    img: <FaNodeJs size={"50%"} />,
+    img: <FaNodeJs size={"70%"} />,
   },
   {
     name: "Express js",
-    img: <SiExpress size={"50%"} />,
+    img: <SiExpress size={"70%"} />,
   },
   {
     name: "MongoDb",
-    img: <DiMongodb size={"50%"} />,
+    img: <DiMongodb size={"70%"} />,
   },
   {
     name: "Postgresql",
-    img: <SiPostgresql size={"50%"} />,
+    img: <SiPostgresql size={"70%"} />,
   },
   {
     name: "Bootstrap",
-    img: <FaBootstrap size={"50%"} />,
+    img: <FaBootstrap size={"70%"} />,
   },
   {
     name: "Github",
-    img: <FaGithub size={"50%"} />,
+    img: <FaGithub size={"70%"} />,
   },
   {
     name: "Socket Io",
-    img: <SiSocketdotio size={"50%"} />,
+    img: <SiSocketdotio size={"70%"} />,
   },
 ];
 
@@ -96,26 +96,26 @@ export const projectData = [
     title: "Glyco Vision",
     desc: "Glyco Vision is a comprehensive web application designed to help users track and manage their blood sugar levels. It provides insightful charts and offers personalized advice based on symptoms. Additionally, it includes features for finding pharmacies on duty and giving patient advice.",
     img: "../pharmacy.png",
-    isReverced: true,
+    isReverced: false,
     gitUrl: "https://github.com/azdinserhani/Glyco-Vision_clients-site.git",
   },
 ];
 
 export const social = [
   {
-    icon: <GitHubIcon fontSize="inherit" />,
+    icon: <GitHubIcon fontSize="large" />,
     link: "https://github.com/azdinserhani"
   },
   {
    
-    icon: <FacebookOutlinedIcon fontSize="inherit" />,
+    icon: <FacebookOutlinedIcon fontSize="large" />,
     link: "https://www.facebook.com/azdine.azdine.52438174"
   },
   {
-    icon:<InstagramIcon fontSize="inherit" />,
+    icon:<InstagramIcon fontSize="large" />,
  link: "https://www.instagram.com/azedine.dev/" 
   }, {
-    icon: <LinkedInIcon fontSize="inherit" />,
+    icon: <LinkedInIcon fontSize="large" />,
   link: "https://www.linkedin.com/in/az-eddine-serhani-32033a288/"
 }
 

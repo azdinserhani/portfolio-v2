@@ -1,44 +1,188 @@
 @import "../../App.scss";
+
 .skills {
-  height: 60vh;
+  min-height: 100vh;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-
   justify-content: center;
-  @include mobile(){
-    height: 100vh;
-  justify-content: start;
-
+  background-color: $dark-background;
+  padding: 80px 20px;
+  overflow: hidden;
+  margin-top: 100px;
+  .skills-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    
+    .bg-circle {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.15;
+    }
+    
+    .circle1 {
+      width: 400px;
+      height: 400px;
+      background-color: $accent-color;
+      top: -100px;
+      left: -100px;
+    }
+    
+    .circle2 {
+      width: 350px;
+      height: 350px;
+      background-color: #3f51b5;
+      bottom: -50px;
+      right: -50px;
+    }
   }
-  .skillsItems {
-   display: grid;
-   grid-template-columns: repeat(6,100px);
-   row-gap: 30px;
-   column-gap: 30px;
-   align-items: center;
-   justify-content: center;
-   @include mobile(){
-     grid-template-columns: repeat(3,100px);
-     transform-origin: bottom;
-   }
-    .skItem {
-        border: 1px solid black;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100px;
-        gap: 20px;
-        border-radius: 5px;
-        transition: all 0.3s ease-in;
-        cursor: pointer;
-
-          &:hover {
-            scale: 1.1;
-            color: white;
-            background-color: black;
+  
+  .skills-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    
+    .sectionTittle {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-align: center;
+      
+      span {
+        color: $accent-color;
+      }
+    }
+    
+    .skills-subtitle {
+      text-align: center;
+      font-size: 18px;
+      color: $text-secondary;
+      margin-bottom: 60px;
+    }
+    
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      
+      .skills-category {
+        flex: 1;
+        min-width: 280px;
+        max-width: 500px;
+        
+        .category-title {
+          font-size: 22px;
+          font-weight: 600;
+          margin-bottom: 25px;
+          color: $text-primary;
+          position: relative;
+          display: inline-block;
+          padding-bottom: 10px;
+          
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: $accent-color;
           }
+        }
+        
+        .skillsItems {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+          gap: 20px;
+          
+          .skItem {
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 130px;
+            gap: 15px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            background-color: rgba(30, 30, 30, 0.7);
+            color: $text-secondary;
+            padding: 15px 10px;
+            backdrop-filter: blur(5px);
+            
+            .skill-icon {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 70px;
+              color: $accent-color;
+            }
+            
+            span {
+              font-size: 14px;
+              font-weight: 500;
+              text-align: center;
+            }
+            
+            &:hover {
+              color: $text-primary;
+              background-color: rgba($accent-color, 0.15);
+              border-color: $accent-color;
+              transform: translateY(-5px);
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @include mobile() {
+    padding: 60px 15px;
+    
+    .skills-content {
+      .sectionTittle {
+        font-size: 36px;
+      }
+      
+      .skills-subtitle {
+        font-size: 16px;
+        margin-bottom: 40px;
+      }
+      
+      .skills-container {
+        flex-direction: column;
+        gap: 30px;
+        
+        .skills-category {
+          min-width: 100%;
+          
+          .category-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+          }
+          
+          .skillsItems {
+            grid-template-columns: repeat(2, 1fr);
+            
+            .skItem {
+              height: 120px;
+              padding: 15px 10px;
+              
+              .skill-icon {
+                height: 60px;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -1,4 +1,3 @@
-
 @mixin mobile {
   @media (max-width: 480px) {
     @content;
@@ -9,22 +8,56 @@
     @content;
   }
 }
+
+// Define color variables
+$dark-background: #121212;
+$dark-surface: #1e1e1e;
+$text-primary: #ffffff;
+$text-secondary: #cccccc;
+$accent-color: #ff5722; // Orange accent color
+$accent-hover: #ff7043;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
+
 body {
- @include mobile(){
-  width: 100vw;
-  
-}
+  @include mobile(){
+    width: 100vw;
+  }
   width: 1366px;
   margin: auto;
+  background-color: $dark-background;
+  color: $text-primary;
 }
+
+.app {
+  background-color: $dark-background;
+}
+
 .sectionTittle{
   font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 50px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  color: $text-primary;
+}
+
+// Common button styles
+button {
+  background-color: $accent-color;
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: $accent-hover;
+  }
+}
+
+a {
+  color: $text-primary;
+  text-decoration: none;
 }
