@@ -64,10 +64,17 @@ export const skillsNew = [
     img: <SiSocketdotio size={"70%"} />,
   },
 ];
-
 export const projectData = [
   {
     num: "01",
+    title: "EdClub",
+    desc: "EdClub is a Learning Management System (LMS) platform that provides a comprehensive solution for online education. It offers features for course creation, student enrollment, progress tracking, and interactive learning experiences through quizzes and assignments.",
+    img: "../EdClub.png",
+    isReverced: true,
+    gitUrl: "https://github.com/azdinserhani/PFE-2025.git",
+  },
+  {
+    num: "02",
     title: "YumYard",
     desc: "YumYard is a dynamic web application designed to help users discover, manage, and share recipes.",
     img: "../YumYard.png",
@@ -75,24 +82,15 @@ export const projectData = [
     gitUrl: "https://github.com/azdinserhani/YumYard-Client-Side.git",
   },
   {
-    num: "02",
+    num: "03",
     title: "E-Commerce Website",
     desc: "A full-stack e-commerce platform with a React client and an admin panel for managing products, orders, and users. The API supports smooth data handling for a seamless shopping experience.",
     img: "../ecommerce.png",
     isReverced: true,
     gitUrl: "https://github.com/azdinserhani/e-commerce-client-side.git",
   },
-  // {
-  //   num: "03",
-  //   title: "Clicon",
-  //   desc: "A modern marketplace connecting buyers and sellers with seamless listing, browsing, and purchasing features, showcasing scalable web development expertise.",
-  //   img: "../clicon.png",
-  //   isReverced: false,
-  //   link: "https://marketplace-project-client.onrender.com/",
-  //   gitUrl: false,
-  // },
   {
-    num: "03",
+    num: "04",
     title: "Glyco Vision",
     desc: "Glyco Vision is a comprehensive web application designed to help users track and manage their blood sugar levels. It provides insightful charts and offers personalized advice based on symptoms. Additionally, it includes features for finding pharmacies on duty and giving patient advice.",
     img: "../pharmacy.png",
