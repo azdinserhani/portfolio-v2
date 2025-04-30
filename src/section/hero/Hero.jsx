@@ -133,7 +133,7 @@ const Hero = () => {
             animate={{ scale: 1, opacity: 1, transition: { duration: 0.8, delay: 0.3 } }}
           >
             <div className="image-container">
-              <img src="../profile.jpg" alt="Az-eddine Serhani" />
+              <img src="../MyImg.jpeg" alt="Az-eddine Serhani" />
               <div className="image-border"></div>
             </div>
           </motion.div>
