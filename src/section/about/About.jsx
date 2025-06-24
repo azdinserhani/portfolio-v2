@@ -8,8 +8,8 @@ const About = () => {
         <div className="bg-circle circle1"></div>
         <div className="bg-circle circle2"></div>
       </div>
-      
-      <motion.div 
+
+      <motion.div
         className="about-content"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1, transition: { duration: 0.8 } }}
@@ -21,7 +21,7 @@ const About = () => {
         >
           About <span>Me</span>
         </motion.h2>
-        
+
         <div className="about-container">
           <motion.div
             className="imgContainer"
@@ -34,12 +34,12 @@ const About = () => {
               },
             }}
           >
-            <img src="../about.jpg" alt="about" />
+            <img src="../secImg.jpeg" alt="about" />
             <div className="img-border"></div>
           </motion.div>
-          
+
           <div className="about-info">
-            <motion.div 
+            <motion.div
               className="about-card"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0, transition: { duration: 0.6 } }}
@@ -47,19 +47,28 @@ const About = () => {
               <h3>A Full Stack Developer based in Morocco</h3>
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.2 } }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.6, delay: 0.2 },
+                }}
               >
-                Hi, I'm Az-eddine Serhani, a 20-year-old web developer from Morocco.
-                Passionate about technology and problem-solving, I dive into web
-                development to tackle challenges and innovate. Whether it's front-end
-                design or back-end logic, I thrive on pushing boundaries and creating
-                inspiring solutions. Excited for the journey ahead!
+                Hi, I'm Az-eddine Serhani, a 20-year-old web developer from
+                Morocco. Passionate about technology and problem-solving, I dive
+                into web development to tackle challenges and innovate. Whether
+                it's front-end design or back-end logic, I thrive on pushing
+                boundaries and creating inspiring solutions. Excited for the
+                journey ahead!
               </motion.p>
-              
-              <motion.div 
+
+              <motion.div
                 className="about-stats"
                 initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.3 } }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.6, delay: 0.3 },
+                }}
               >
                 <div className="stat-item">
                   <span className="stat-number">2+</span>

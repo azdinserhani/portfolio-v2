@@ -14,8 +14,8 @@ const Hero = () => {
         <div className="bg-circle circle2"></div>
         <div className="bg-circle circle3"></div>
       </div>
-      
-      <motion.div 
+
+      <motion.div
         className="hero-content"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 0.8 } }}
@@ -34,7 +34,7 @@ const Hero = () => {
               },
             }}
           >
-            <motion.div 
+            <motion.div
               className="intro-tag"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -42,7 +42,7 @@ const Hero = () => {
             >
               Welcome to my portfolio
             </motion.div>
-            
+
             <h1>
               Hello I'm <br />
               <span className="name-animation">
@@ -60,7 +60,7 @@ const Hero = () => {
                 })}
               </span>
             </h1>
-            
+
             <div className="title-container">
               <h2>
                 Full Stack <span>Developer</span>
@@ -70,9 +70,13 @@ const Hero = () => {
                 <h2>Based In Morocco</h2>
               </div>
             </div>
-            
-            <p>Passionate about clean code and user-centric design. Creating innovative web solutions that deliver exceptional user experiences.</p>
-            
+
+            <p>
+              Passionate about clean code and user-centric design. Creating
+              innovative web solutions that deliver exceptional user
+              experiences.
+            </p>
+
             <div className="cta-buttons">
               <motion.a
                 href="../../public/myCv.pdf"
@@ -88,8 +92,8 @@ const Hero = () => {
                   <FileDownloadOutlinedIcon />
                 </button>
               </motion.a>
-              <motion.a 
-                href="#Contact" 
+              <motion.a
+                href="#Contact"
                 className="secondary-btn"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -97,7 +101,7 @@ const Hero = () => {
                 <button>Get In Touch</button>
               </motion.a>
             </div>
-            
+
             <div className="social">
               {social.map((item, index) => {
                 return (
@@ -105,10 +109,10 @@ const Hero = () => {
                     key={index}
                     href={item.link}
                     initial={{ opacity: 0, y: 20 }}
-                    whileHover={{ 
+                    whileHover={{
                       scale: 1.1,
                       color: "#ff5722",
-                      transition: { duration: 0.2 }
+                      transition: { duration: 0.2 },
                     }}
                     animate={{
                       opacity: 1,
@@ -116,7 +120,7 @@ const Hero = () => {
                       transition: {
                         duration: 0.5,
                         ease: "easeOut",
-                        delay: 0.8 + (0.1 * index),
+                        delay: 0.8 + 0.1 * index,
                       },
                     }}
                   >
@@ -126,14 +130,18 @@ const Hero = () => {
               })}
             </div>
           </motion.div>
-          
+
           <motion.div
             className="right"
             initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1, transition: { duration: 0.8, delay: 0.3 } }}
+            animate={{
+              scale: 1,
+              opacity: 1,
+              transition: { duration: 0.8, delay: 0.3 },
+            }}
           >
             <div className="image-container">
-              <img src="../MyImg.jpeg" alt="Az-eddine Serhani" />
+              <img src="../myImg.jpeg" alt="Az-eddine Serhani" />
               <div className="image-border"></div>
             </div>
           </motion.div>
