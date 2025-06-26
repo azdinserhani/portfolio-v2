@@ -141,7 +141,7 @@ const Hero = () => {
             }}
           >
             <div className="image-container">
-              <img src="../myImg.jpeg" alt="Az-eddine Serhani" />
+              <img src="../myImg.png" alt="Az-eddine Serhani" />
               <div className="image-border"></div>
             </div>
           </motion.div>
