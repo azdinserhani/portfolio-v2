@@ -77,6 +77,7 @@ const Hero = () => {
             <div className="cta-buttons">
               <motion.a
                 href="https://www.linkedin.com/in/az-eddine-serhani-32033a288/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="primary-btn"
                 whileHover={{ scale: 1.05 }}

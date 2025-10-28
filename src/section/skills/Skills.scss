@@ -67,9 +67,10 @@
     }
     
     .skills-container {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
       flex-wrap: wrap;
-      justify-content: center;
+      // justify-content: center;
       gap: 40px;
       
       .skills-category {

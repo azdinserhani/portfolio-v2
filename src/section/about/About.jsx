@@ -34,7 +34,16 @@ const About = () => {
               },
             }}
           >
-            <img src="../secImg.jpeg" alt="about" />
+            <img
+              src="../myImg.webp"
+              alt="about"
+              style={{
+                filter: "grayscale(100%)",
+                transition: "filter 0.3s ease",
+              }}
+              onMouseEnter={e => (e.currentTarget.style.filter = "none")}
+              onMouseLeave={e => (e.currentTarget.style.filter = "grayscale(100%)")}
+            />
             <div className="img-border"></div>
           </motion.div>
 

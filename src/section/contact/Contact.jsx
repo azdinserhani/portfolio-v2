@@ -24,7 +24,7 @@ const Contact = () => {
       },
     },
   };
-  
+
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
@@ -45,15 +45,15 @@ const Contact = () => {
         }
       );
   };
-  
+
   return (
     <div className="contact" ref={ref} id="Contact">
       <div className="contact-background">
         <div className="bg-circle circle1"></div>
         <div className="bg-circle circle2"></div>
       </div>
-      
-      <motion.div 
+
+      <motion.div
         className="contact-content"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1, transition: { duration: 0.8 } }}
@@ -65,7 +65,7 @@ const Contact = () => {
         >
           Get In <span>Touch</span>
         </motion.h2>
-        
+
         <motion.div
           className="wrapper"
           variants={variants}
@@ -102,7 +102,7 @@ const Contact = () => {
                 />
               </svg>
             </motion.div>
-            
+
             <motion.form
               onSubmit={sendEmail}
               ref={formRef}
@@ -132,8 +132,8 @@ const Contact = () => {
                 variants={variants}
                 required
               />
-              <motion.button 
-                type="submit" 
+              <motion.button
+                type="submit"
                 className="submit-btn"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
@@ -142,23 +142,23 @@ const Contact = () => {
               </motion.button>
             </motion.form>
           </motion.div>
-          
+
           <motion.div className="contact-info" variants={variants}>
             <motion.h3 variants={variants}>
               Let's Work <br />
               Together
             </motion.h3>
-            
+
             <motion.div className="info-item" variants={variants}>
               <h4>Email</h4>
-              <span>azdineserhani1@gmail.com</span>
+              <span>contact@azdine.site</span>
             </motion.div>
-            
+
             <motion.div className="info-item" variants={variants}>
               <h4>Phone</h4>
               <span>+21263624246</span>
             </motion.div>
-            
+
             <motion.div className="info-item" variants={variants}>
               <h4>Address</h4>
               <span>Morocco</span>
@@ -166,7 +166,7 @@ const Contact = () => {
           </motion.div>
         </motion.div>
       </motion.div>
-      
+
       <ToastContainer position="bottom-right" theme="dark" />
     </div>
   );

@@ -10,10 +10,18 @@ import { SiPostgresql } from "react-icons/si";
 import { FaBootstrap } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { SiSocketdotio } from "react-icons/si";
+import { RiTailwindCssFill } from "react-icons/ri";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { SiNestjs } from "react-icons/si";
+import { RiSupabaseFill } from "react-icons/ri";
+import { SiN8N } from "react-icons/si";
+import { RiNextjsFill } from "react-icons/ri";
+import { IoLogoVercel } from "react-icons/io5";
+import { RiNotionFill } from "react-icons/ri";
+import { FaFigma } from "react-icons/fa";
 export const skillsNew = [
   {
     name: "ReactJs",
@@ -52,6 +60,10 @@ export const skillsNew = [
     img: <SiPostgresql size={"70%"} />,
   },
   {
+    name: "Tailwind CSS",
+    img: <RiTailwindCssFill size={"70%"} />,
+  },
+  {
     name: "Bootstrap",
     img: <FaBootstrap size={"70%"} />,
   },
@@ -63,24 +75,52 @@ export const skillsNew = [
     name: "Socket Io",
     img: <SiSocketdotio size={"70%"} />,
   },
+  {
+    name: "Nestjs",
+    img: <SiNestjs size={"70%"} />,
+  },
+  {
+    name: "Supabase",
+    img: <RiSupabaseFill size={"70%"} />,
+  },
+  {
+    name: "N8N",
+    img: <SiN8N size={"70%"} />,
+  },
+  {
+    name: "Nextjs",
+    img: <RiNextjsFill size={"70%"} />,
+  },
+
+  {
+    name: "Notion",
+    img: <RiNotionFill size={"70%"} />,
+  },
+  {
+    name: "Figma",
+    img: <FaFigma size={"70%"} />,
+  },
 ];
 export const projectData = [
   {
     num: "01",
-    title: "EdClub",
-    desc: "EdClub is a Learning Management System (LMS) platform that provides a comprehensive solution for online education. It offers features for course creation, student enrollment, progress tracking, and interactive learning experiences through quizzes and assignments.",
-    img: "../EdClub.png",
-    isReverced: true,
-    gitUrl: "https://github.com/azdinserhani/PFE-2025.git",
+    title: "ProjectLab",
+    desc: "ProjectLab helps developers learn by building real-world projects. Get hands-on experience, master modern tools, and create a portfolio that stands out to employers.",
+    img: "../projectLab.png",
+    isReverced: false,
+
+    link: "https://project-lab-pi.vercel.app/",
   },
   {
     num: "02",
-    title: "YumYard",
-    desc: "YumYard is a dynamic web application designed to help users discover, manage, and share recipes.",
-    img: "../YumYard.png",
-    isReverced: false,
-    gitUrl: "https://github.com/azdinserhani/YumYard-Client-Side.git",
+    title: "StageFlow - Internship Management System",
+    desc: "A comprehensive full-stack web application for managing student internships and trainees within an organization. Built with React.js frontend and Node.js/Express backend, featuring role-based authentication, document management, and real-time analytics. This project was developed specifically for ONEE and is self-hosted on the company intranet.",
+      info: "For security reasons, the project is not publicly accessible.",
+    img: "../stageFlow.png",
+    isReverced: true,
+    gitUrl: "",
   },
+
   {
     num: "03",
     title: "E-Commerce Website",
