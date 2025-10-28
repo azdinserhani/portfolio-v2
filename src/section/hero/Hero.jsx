@@ -1,8 +1,6 @@
 import "./Hero.scss";
 import { motion } from "framer-motion";
-import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
-
-import { social } from "../../mockData";
+import { FaLinkedin, FaBriefcase } from "react-icons/fa";
 
 const Hero = () => {
   const name = "Az-eddine serhani.".split("");
@@ -72,25 +70,19 @@ const Hero = () => {
             </div>
 
             <p>
-              Passionate about clean code and user-centric design. Creating
-              innovative web solutions that deliver exceptional user
-              experiences.
+              I help businesses grow with fast, scalable, and user-friendly web
+              apps.
             </p>
 
             <div className="cta-buttons">
               <motion.a
-                href="../../public/myCv.pdf"
-                download="Az-eddine_Serhani_CV.pdf"
-                target="_blank"
+                href="https://www.linkedin.com/in/az-eddine-serhani-32033a288/"
                 rel="noopener noreferrer"
                 className="primary-btn"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <button>
-                  Download Resume
-                  <FileDownloadOutlinedIcon />
-                </button>
+                <button>Let’s Connect on LinkedIn</button>
               </motion.a>
               <motion.a
                 href="#Contact"
@@ -98,37 +90,43 @@ const Hero = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <button>Get In Touch</button>
+                <button>Hire Me</button>
               </motion.a>
             </div>
 
-            <div className="social">
-              {social.map((item, index) => {
-                return (
-                  <motion.a
-                    key={index}
-                    href={item.link}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileHover={{
-                      scale: 1.1,
-                      color: "#ff5722",
-                      transition: { duration: 0.2 },
-                    }}
-                    animate={{
-                      opacity: 1,
-                      y: 0,
-                      transition: {
-                        duration: 0.5,
-                        ease: "easeOut",
-                        delay: 0.8 + 0.1 * index,
-                      },
-                    }}
-                  >
-                    {item.icon}
-                  </motion.a>
-                );
-              })}
-            </div>
+            {/* Stats: LinkedIn followers and clients handled */}
+            <motion.div
+              className="stats"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+            >
+              <motion.div
+                className="stat-card"
+                whileHover={{ y: -4 }}
+                transition={{ type: "spring", stiffness: 250, damping: 20 }}
+                aria-label="LinkedIn followers"
+              >
+                <div className="stat-icon">
+                  <FaLinkedin />
+                </div>
+                <div className="stat-value">3.5k+</div>
+                <div className="stat-label">LinkedIn Followers</div>
+              </motion.div>
+
+              <motion.div
+                className="stat-card"
+                whileHover={{ y: -4 }}
+                transition={{ type: "spring", stiffness: 250, damping: 20 }}
+                aria-label="Clients handled"
+              >
+                <div className="stat-icon">
+                  <FaBriefcase />
+                </div>
+                <div className="stat-value">12+</div>
+                <div className="stat-label">Clients Handled</div>
+              </motion.div>
+            </motion.div>
           </motion.div>
 
           <motion.div
@@ -141,7 +139,7 @@ const Hero = () => {
             }}
           >
             <div className="image-container">
-              <img src="../myImg.png" alt="Az-eddine Serhani" />
+              <img src="../myImg.webp" alt="Az-eddine Serhani" />
               <div className="image-border"></div>
             </div>
           </motion.div>

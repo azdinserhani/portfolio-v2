@@ -98,23 +98,3 @@ export const projectData = [
     gitUrl: "https://github.com/azdinserhani/Glyco-Vision_clients-site.git",
   },
 ];
-
-export const social = [
-  {
-    icon: <GitHubIcon fontSize="large" />,
-    link: "https://github.com/azdinserhani"
-  },
-  {
-   
-    icon: <FacebookOutlinedIcon fontSize="large" />,
-    link: "https://www.facebook.com/azdine.azdine.52438174"
-  },
-  {
-    icon:<InstagramIcon fontSize="large" />,
- link: "https://www.instagram.com/azedine.dev/" 
-  }, {
-    icon: <LinkedInIcon fontSize="large" />,
-  link: "https://www.linkedin.com/in/az-eddine-serhani-32033a288/"
-}
-
-]

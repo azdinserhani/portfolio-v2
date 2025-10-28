@@ -345,6 +345,82 @@
           gap: 15px;
         }
       }
+
+      // Stats section
+      .stats {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 20px;
+
+        @include tablet {
+          flex-direction: column;
+          gap: 14px;
+        }
+
+        @include mobile {
+          grid-template-columns: 1fr;
+          gap: 12px;
+          width: 100%;
+          max-width: 360px;
+        }
+
+        .stat-card {
+          background-color: rgba(255, 255, 255, 0.04);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 14px;
+          padding: 14px 16px;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          backdrop-filter: blur(6px);
+          transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+          width: 300px;
+          
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.06);
+            border-color: rgba($accent-color, 0.3);
+          }
+
+          .stat-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: grid;
+            place-items: center;
+            background: rgba($accent-color, 0.12);
+            color: $accent-color;
+            flex: 0 0 auto;
+
+            svg {
+              font-size: 20px;
+            }
+          }
+
+          .stat-value {
+            font-size: 22px;
+            font-weight: 700;
+            color: $text-primary;
+            line-height: 1;
+          }
+
+          .stat-label {
+            margin-left: auto;
+            font-size: 13px;
+            color: $text-secondary;
+            opacity: 0.9;
+            white-space: nowrap;
+          }
+
+          @include mobile {
+            
+            padding: 12px 14px;
+            .stat-icon { width: 36px; height: 36px; svg { font-size: 18px; } }
+            .stat-value { font-size: 20px; }
+            .stat-label { font-size: 12px; margin-left: 0; }
+          }
+        }
+      }
     }
     
     .right {
@@ -358,8 +434,8 @@
       }
       
       .image-container {
-        width: 400px;
-        height: 400px;
+        width: 600px;
+        height: 600px;
         position: relative;
         
         @include tablet {
