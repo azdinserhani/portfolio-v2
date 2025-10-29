@@ -1,12 +1,53 @@
 import "./Hero.scss";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaBriefcase } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const Hero = () => {
   const name = "Az-eddine serhani.".split("");
 
+  const siteTitle = "Full Stack Developer | Az-eddine Serhani";
+  const siteDescription =
+    "Full stack developer based in Morocco. I build fast, scalable, and user-friendly web apps for growing businesses.";
+  const origin = typeof window !== "undefined" ? window.location.origin : "";
+  const currentUrl = `${origin}/`;
+  const ogImage = `${origin}/myImg.webp`;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Az-eddine Serhani",
+    jobTitle: "Full Stack Developer",
+    url: currentUrl,
+    image: ogImage,
+    sameAs: ["https://www.linkedin.com/in/az-eddine-serhani-32033a288/"],
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "MA",
+    },
+  };
+
   return (
     <div className="hero" id="Home">
+      <Helmet>
+        <title>{siteTitle}</title>
+        <meta name="description" content={siteDescription} />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={currentUrl} />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={siteTitle} />
+        <meta property="og:description" content={siteDescription} />
+        <meta property="og:url" content={currentUrl} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:site_name" content="Az-eddine Serhani Portfolio" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={siteTitle} />
+        <meta name="twitter:description" content={siteDescription} />
+        <meta name="twitter:image" content={ogImage} />
+
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+      </Helmet>
       <div className="hero-background">
         <div className="bg-circle circle1"></div>
         <div className="bg-circle circle2"></div>
