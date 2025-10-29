@@ -36,6 +36,7 @@ const About = () => {
           >
             <img
               src="../myImg.webp"
+              loading="lazy"
               alt="about"
               style={{
                 filter: "grayscale(100%)",

@@ -25,7 +25,7 @@ const ProjectCard = ({ item }) => {
         }}
       >
         <div className="img-container">
-          <img src={item.img} alt={item.title} />
+          <img src={item.img} alt={item.title} loading="lazy" />
         </div>
       </motion.div>
 
